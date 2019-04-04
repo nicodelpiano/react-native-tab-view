@@ -284,6 +284,11 @@ export default class Pager<T: Route> extends React.Component<Props<T>> {
         set(state.finished, FALSE),
         set(this._index, index),
         startClock(this._clock),
+        call([this._index], ([value]) => {
+          // set current index so componentDidUpdate not trigger new onIndexChange causing double swipe
+          this._currentIndexValue = value;
+          this.props.onIndexChange(value);
+        }),
       ]),
       cond(
         this._isSwipeGesture,

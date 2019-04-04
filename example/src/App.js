@@ -19,6 +19,7 @@ import TabBarIconExample from './TabBarIconExample';
 import CustomIndicatorExample from './CustomIndicatorExample';
 import CustomTabBarExample from './CustomTabBarExample';
 import CoverflowExample from './CoverflowExample';
+import FastIndexChange from './FastIndexChange';
 
 type State = {
   title: string,
@@ -36,6 +37,7 @@ const EXAMPLE_COMPONENTS = [
   CustomIndicatorExample,
   CustomTabBarExample,
   CoverflowExample,
+  FastIndexChange,
 ];
 
 export default class ExampleList extends React.Component<{}, State> {
